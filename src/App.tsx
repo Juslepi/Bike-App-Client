@@ -1,8 +1,8 @@
 import Journeys from './pages/Journeys'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './App.css'
 import Navbar from './components/Navbar'
 import Stations from './pages/Stations'
+import CssBaseline from '@mui/material/CssBaseline/CssBaseline'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
+    <CssBaseline />
     <RouterProvider router={router}/>
     </>
   )
