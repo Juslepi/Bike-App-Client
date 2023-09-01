@@ -10,6 +10,7 @@ export interface Journey {
 }
 
 export interface Station {
+    _id: string,
     ID: number,
     Name: string,
     Address: string,
