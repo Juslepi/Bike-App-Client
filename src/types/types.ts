@@ -17,5 +17,8 @@ export interface Station {
     Capacity: number,
     X: number,
     Y: number,
-    ["Average departure length"]: number
+    Returns: number,
+    Departres: number,
+    ["Average departure length"]: number,
+    ["Average return length"]: number,
 }
