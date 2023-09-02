@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Stations from './pages/Stations'
 import CssBaseline from '@mui/material/CssBaseline/CssBaseline'
+import StationView from './pages/stationView'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "stations",
         element: <Stations />
+      },
+      {
+        path: "stations/:id",
+        element: <StationView />
       }
     ]
   },
