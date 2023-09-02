@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { DataGrid } from '@mui/x-data-grid';
 import { Station } from "../types/types"
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 const cols = [
   { field: 'Name', headerName: 'Name', width: 150 },
@@ -21,9 +22,11 @@ const Stations = () => {
     getStations()
   }, [])
 
+  const navigate = useNavigate()
+
   return (
     <div>
-      <DataGrid getRowId={(row) => row._id} rows={stations} columns={cols} />
+      <DataGrid getRowId={(row) => row._id} rows={stations} columns={cols} onRowClick={(row) => navigate(`/stations/${row.id}`)} />
     </div>
   )
 }
